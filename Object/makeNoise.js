@@ -3,5 +3,10 @@
 
 var animal;
 var makeNoise;
+const object={
+    
 
-
+    makeNoise:function (object){
+ return this.key;
+}
+}

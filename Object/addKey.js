@@ -4,4 +4,7 @@
 var animal;
 var addKey;
 
-
+function addKey(animal){
+animal.name(bo);
+return animal;
+}

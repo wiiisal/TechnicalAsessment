@@ -2,3 +2,8 @@
 // names of species, name, age, gender & favoriteFood.
 
 var moreAnimals;
+moreAnimals=[
+    {name:'dog',age:3, gender:'male',favoriteFood:'meet'},
+    {name:'bird',age:4, gender:'female',favoriteFood:'beens'},
+    {name:'axel', age:5, gender:'male',favoriteFood:'fruits'}
+]

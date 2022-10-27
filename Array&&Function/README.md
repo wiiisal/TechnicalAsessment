@@ -10,8 +10,8 @@
    that the following invocations match your expectations:
 
    ```js
-   function square(num){
-      return num * num;
+   function square(monkey){
+      return monkey * monkey;
    }
 
    square(10) + 2;
@@ -23,10 +23,13 @@
 
 2. Write a sentence in plain English describing how `square(square(15))` is
    evaluated.
+   square(15)returns 15*15 =225 then square(squre(15))is square(225)=225*225=50625
 
 3. Rename `square`'s `num` parameter in your above code to `monkey`, and
    rename the uses of that parameter in the body to `monkey` as well. Will the
    function `square` still work? Why or why not?
+
+   yes the function still work because it consider the parameter monkey as a nomanclature but it only takes a number to function.
 
 4. What is wrong with the following definitions of `square`? Write a sentence or
    two describing the issue(s); then, try copying the erroneous examples into a
@@ -38,43 +41,49 @@
    function square(monkey) {
      return x * x;
    }
+   x is not defined for our function square it takes monkey as a parametre
 
    function square(5) {
      return 5 * 5;
    }
+   inexpected number 5 is not a parameter
 
    function square("x") {
      return "x" * "x";
    }
    ```
+    square doesn't take a string as a parameter
 
 5. Fix the invalid syntax in the following functions (you can copy and paste these
    invalid definitions into your console and then edit them there):
 
    ```js
-   func square1(x {
+   func square1(x) {
      return x * x;
    }
 
-   functionsquare2 x)
+   function square2(x){
      return x * x;
    }
 
-   function (x) square3 {
+   function square3 (x)  {
      return x * x;
+   }
    ```
 
 6. The following functions exhibit poor style -- fix these issues using the
    original version of `square` as a reference.
 
    ```js
-   function square(x){return x*x;}
+   function square(x){
+    return x*x;
+    }
 
-   function square (x) { return x *x;
+   function square (x) { 
+    return x *x;
    }
 
-   function square(x)
-   {
+   function square(x){
    return x * x;
    }
    ```
@@ -83,7 +92,7 @@
 
   ```js
   function cube(x) {
-    // your code here
+   return x*x*x; // your code here
   }
   ```
 
@@ -93,7 +102,10 @@
 
   ```js
   // don't forget the parameters!
-  function fullName() {
+  function fullName("firstName","lastName") {
+    var firstName="";
+    var lastName="";
+    return 'firstName'+' '+'lastName'
     // your code here
   }
   fullName("John", "Doe") // => "John Doe"
@@ -102,8 +114,18 @@
 9. Write a function `average` that takes two numbers as input (parameters), and
    returns the average of those numbers.
 
+   function avrage(x,y){
+    return (x+y)/2;
+   }
+
 10. Write a function `greeter` that takes a name as an argument and *greets*
     that name by returning something along the lines of `"Hello, <name>!"`
+    <script>
+    function greeter(name){
+      var name="";
+      return alert(name);
+    }
+    </script>
 
 11. Using the document found at <a href="http://www.gbcnv.edu/documents/ASC/docs/00000005.pdf" target="_blank">this link</a>, translate the first page of geometric
     formulas into JavaScript functions.
@@ -115,6 +137,19 @@
     function perimeterRect(l, w) {
       return 2 * (l + w);
     }
+    function Parallelogram(l,h){
+      return l*h;
+    }
+    function Trapezoid(h,b1,b2){
+      return ((b1+b2)*h)/2;
+    }
+    function triangle(b,h){
+      return (b*h)/2;
+    }
+    function circle((Math.PI),r){
+      return Math.PI*(r**);
+    }
+
     ```
 
     **NOTE:** JavaScript provides some nifty mathematical functions and
@@ -154,7 +189,14 @@ Translate the rest of the geometric formulas found <a href="http://www.gbcnv.edu
     - *t*: time
 
   Write a function `futureValue` that can be used to calculate the *future value*
-  of a quantity of money using compound interest.
+  of a quantity of money using compound interest. 
+  knowing that fv=pv(present value)*(1+i/100)power(n)
+
+  function FV(PV,i,n){
+var x=(1+i/100)
+var FV=PV*(Math.pow(x,n))
+return FV;
+}
 
   Use the function to calculate what the future value of $1700 (*P* = 1700)
   deposited in a bank that pays an annual interest rate of 4.7% (*i* = 0.047),
@@ -164,6 +206,9 @@ Translate the rest of the geometric formulas found <a href="http://www.gbcnv.edu
 2. Write a `power` function that accepts the parameters `base` and `exponent`
    and returns the result. Replace `square` and `cube` with the `power` function
    you just wrote. Do not use `Math.pow`.
+   function power(base,exponent){
+    
+   }
 
 3. Write your own square-root function called `sqrt` that accepts a `number`
    parameter and returns an approximate square root. Square-root approximations

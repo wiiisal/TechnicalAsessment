@@ -4,4 +4,8 @@
 var animal;
 var findAge;
 
-
+function findAge(animal){
+    for(var key in animal){
+        return animal.key;
+    }
+}

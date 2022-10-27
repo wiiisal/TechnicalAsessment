@@ -3,5 +3,10 @@
 
 var animal;
 var getKeys;
-
+function getKeys(animal){
+    for(var key in animal){
+    keys+= key;
+    }
+    return keys;
+}
 

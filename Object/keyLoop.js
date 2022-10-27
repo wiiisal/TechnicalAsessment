@@ -4,4 +4,13 @@
 
 var keyLoop;
 
-
+function keyloop(object){
+    for (var key in object){
+        if(key[i]==monkey){
+            return  "the's a monkey";
+        }
+        else{
+            return "there's no monkey here"
+        }
+    }
+}
