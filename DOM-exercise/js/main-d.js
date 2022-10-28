@@ -69,8 +69,12 @@ const picArray = [
 var header=document.createElement("h2");
 var figure=document.createElement("img","figcaption")
 var p=document.createElement("p")
-var article=document.appendChild("header","figure","p")
-document.getElementsByTagName("main").innerHTML.appendChild("article");
+document.getElementsByTagName("main").createElement("article")
+document.getElementByTagName("article").appendChild("header","figure","p")
+
+
+
+
 picArray.forEach(
   title=> document.getElementsByTagName("h2")+= {title},
   caption=>document.getElementsByTagName(" figcaption")+={caption},
